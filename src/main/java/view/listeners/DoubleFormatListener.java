@@ -4,9 +4,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.control.TextField;
 
-/**
- * Created by Алексей on 17.06.2016.
- */
+
 public class DoubleFormatListener implements ChangeListener<String> {
     private final TextField textField;
 

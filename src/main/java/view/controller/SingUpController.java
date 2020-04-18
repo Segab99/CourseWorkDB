@@ -20,9 +20,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by Алексей on 13.06.2016.
- */
 public class SingUpController implements Initializable {
     public static Stage stage;
     public static UserDAO userDAO;
@@ -87,7 +84,7 @@ public class SingUpController implements Initializable {
             RegistryController.parentPane = this.singUpPane;
             RegistryController.isSystem = false;
             root = FXMLLoader.load(this.getClass().getResource("/fxml/Registry.fxml"));
-            Scene e = new Scene(root, 550.0D, 400.0D);
+            Scene e = new Scene(root, 545.0D, 500.0D);
             this.singUpPane.setDisable(true);
             stage.setTitle("Окно регистрации");
             stage.initStyle(StageStyle.UNDECORATED);

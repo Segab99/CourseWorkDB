@@ -18,9 +18,7 @@ import java.util.ResourceBundle;
 
 import static javafx.scene.control.Alert.AlertType.INFORMATION;
 
-/**
- * Created by Алексей on 17.06.2016.
- */
+
 public class LakeEditController implements Initializable {
     public static Stage stage;
     public static Pane parentPane;

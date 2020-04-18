@@ -39,9 +39,7 @@ import java.util.ResourceBundle;
 import static javafx.collections.FXCollections.observableArrayList;
 import static javafx.collections.FXCollections.observableList;
 
-/**
- * Created by Алексей on 13.06.2016.
- */
+
 public class UserMenuController implements Initializable {
     public static Stage stage;
     public static User user;
@@ -92,6 +90,8 @@ public class UserMenuController implements Initializable {
     public Pane paneInformLake;
     public Label areaLake;
     public Label depthLake;
+    public TextField address;
+    public TextField phone_number;
 
     private ObservableList<String> genders = observableArrayList("Мужской", "Женский");
     private UserLogicController controller;

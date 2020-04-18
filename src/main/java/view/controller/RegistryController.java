@@ -19,9 +19,6 @@ import java.net.URL;
 import java.time.LocalDate;
 import java.util.ResourceBundle;
 
-/**
- * Created by Алексей on 13.06.2016.
- */
 public class RegistryController implements Initializable {
     public static Stage STAGE;
     public static Pane parentPane;
@@ -37,6 +34,8 @@ public class RegistryController implements Initializable {
     public DatePicker birthDate;
     public Button back;
     public ComboBox gender;
+    public TextField address;
+    public TextField number_phone;
 
     private ObservableList<String> genders = FXCollections.observableArrayList("Мужской", "Женский");
 
@@ -65,6 +64,8 @@ public class RegistryController implements Initializable {
         this.middleName.clear();
         this.password.clear();
         this.birthDate.setValue(null);
+        this.address.clear();
+        this.number_phone.clear();
     }
 
     public void singUpAction() {
@@ -77,6 +78,8 @@ public class RegistryController implements Initializable {
             fisher.setLastName(lastName.getText());
             LocalDate birthDate = this.birthDate.getValue();
             fisher.setBirthDay(ConvertionHelper.convertLocalDateToDate(birthDate));
+            fisher.setAddress(address.getText());
+            fisher.setNumberPhone(number_phone.getText());
             if (gender.getValue().equals("Мужской")) {
                 fisher.setGender(Gender.MAN);
             } else {

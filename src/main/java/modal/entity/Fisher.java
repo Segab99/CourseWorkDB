@@ -46,6 +46,12 @@ public class Fisher implements Serializable {
     @Column(name = "middle_name")
     private String middleName;
 
+    @Column(name = "address")
+    private String address;
+
+    @Column(name = "number_phone")
+    private String numberPhone;
+
     /**
      * Пол рыбака
      */
@@ -154,6 +160,14 @@ public class Fisher implements Serializable {
     public void setLures(List<Availability> lures) {
         this.lures = lures;
     }
+
+    public void setAddress(String address) { this.address = address; }
+
+    public String getAddress() { return this.address; }
+
+    public void setNumberPhone(String numberPhone) { this.numberPhone = numberPhone; }
+
+    public String getNumberPhone() { return this.numberPhone; }
 
     @Override
     public String toString() {

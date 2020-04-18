@@ -19,7 +19,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8.0.91" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.UserMenuController">
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="454.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.controller.UserMenuController">
     <children>
         <TabPane layoutX="7.0" layoutY="48.0" prefHeight="400.0" prefWidth="692.0" tabClosingPolicy="UNAVAILABLE">
             <tabs>
@@ -29,7 +29,7 @@
                             <children>
                                 <TextField fx:id="userName" editable="false" layoutX="14.0" layoutY="37.0" prefHeight="26.0" prefWidth="236.0" />
                                 <PasswordField fx:id="password" alignment="TOP_LEFT" editable="false" layoutX="290.0" layoutY="37.0" prefHeight="26.0" prefWidth="236.0" />
-                                <Label layoutX="20.0" layoutY="21.0" text="Логин">
+                                <Label layoutX="13.0" layoutY="21.0" text="Логин">
                                     <font>
                                         <Font name="System Bold" size="13.0" />
                                     </font>
@@ -42,12 +42,12 @@
                                 <TextField fx:id="firstName" editable="false" layoutX="14.0" layoutY="92.0" prefHeight="26.0" prefWidth="236.0" />
                                 <TextField fx:id="lastName" editable="false" layoutX="14.0" layoutY="146.0" prefHeight="26.0" prefWidth="236.0" />
                                 <TextField fx:id="middleName" editable="false" layoutX="290.0" layoutY="92.0" prefHeight="26.0" prefWidth="236.0" />
-                                <Label layoutX="20.0" layoutY="73.0" text="Имя">
+                                <Label layoutX="12.0" layoutY="73.0" text="Имя">
                                     <font>
                                         <Font name="System Bold" size="13.0" />
                                     </font>
                                 </Label>
-                                <Label layoutX="20.0" layoutY="130.0" text="Фамилия">
+                                <Label layoutX="10.0" layoutY="130.0" text="Фамилия">
                                     <font>
                                         <Font name="System Bold" size="13.0" />
                                     </font>
@@ -63,14 +63,26 @@
                                         <Font name="System Bold" size="13.0" />
                                     </font>
                                 </Label>
-                                <Button fx:id="editButton" layoutX="347.0" layoutY="268.0" mnemonicParsing="false" onAction="#editAction" text="Редактировать" />
+                                <Button fx:id="editButton" layoutX="192.0" layoutY="320.0" mnemonicParsing="false" onAction="#editAction" text="Редактировать" />
                                 <ComboBox fx:id="genderComboBox" disable="true" editable="true" layoutX="14.0" layoutY="194.0" prefHeight="25.0" prefWidth="236.0" />
-                                <Label layoutX="20.0" layoutY="176.0" text="Пол">
+                                <Label layoutX="13.0" layoutY="176.0" text="Пол">
                                     <font>
                                         <Font name="System Bold" size="13.0" />
                                     </font>
                                 </Label>
-                                <Button fx:id="saveButton" defaultButton="true" layoutX="80.0" layoutY="268.0" mnemonicParsing="false" onAction="#saveAction" text="Сохранить изменения" />
+                                <Button fx:id="saveButton" defaultButton="true" layoutX="26.0" layoutY="320.0" mnemonicParsing="false" onAction="#saveAction" text="Сохранить изменения" />
+                        <Label layoutX="290.0" layoutY="176.0" text="Адрес">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="address" editable="false" layoutX="290.0" layoutY="194.0" prefHeight="26.0" prefWidth="236.0" />
+                        <Label layoutX="14.0" layoutY="227.0" text="Номер телефона">
+                           <font>
+                              <Font name="System Bold" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="phone_number" editable="false" layoutX="14.0" layoutY="245.0" prefHeight="26.0" prefWidth="236.0" />
                             </children>
                         </AnchorPane>
                     </content>
@@ -148,7 +160,7 @@
                               </ImageView>
                            </graphic>
                         </ToggleButton>
-                        <Pane fx:id="paneInformLure"  visible="false" layoutY="181.0" prefHeight="129.0" prefWidth="286.0">
+                        <Pane fx:id="paneInformLure" layoutY="181.0" prefHeight="129.0" prefWidth="286.0" visible="false">
                            <children>
                               <Text layoutX="7.0" layoutY="19.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Дополнительная информация о наживке" textAlignment="CENTER" underline="true">
                                  <font>
@@ -345,8 +357,8 @@
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Button layoutX="24.0" layoutY="21.0" mnemonicParsing="false" onAction="#openViewReportLure" text="Самая глубоководная наживка" />
-                        <Button layoutX="24.0" layoutY="74.0" mnemonicParsing="false" onAction="#openViewReportFish" text="Отчет о весе рыб" />
-                        <Button layoutX="24.0" layoutY="128.0" mnemonicParsing="false" onAction="#openViewReportLakeAndFish" text="Отчет о рыбах и озерах">
+                        <Button layoutX="24.0" layoutY="56.0" mnemonicParsing="false" onAction="#openViewReportFish" text="Отчет о весе рыб" />
+                        <Button layoutX="24.0" layoutY="91.0" mnemonicParsing="false" onAction="#openViewReportLakeAndFish" text="Отчет о рыбах и озерах">
                            <tooltip>
                               <Tooltip text="Сколько в конкртеном озере&#10;проживает рыб и каких" />
                            </tooltip>
@@ -357,11 +369,16 @@
             </tabs>
         </TabPane>
         <Button fx:id="exit" layoutX="559.0" layoutY="11.0" mnemonicParsing="false" onAction="#exitProgramm" prefHeight="26.0" prefWidth="125.0" text="Выход" />
-        <Text fill="#5eae62" fontSmoothingType="LCD" layoutX="14.0" layoutY="31.0" stroke="#8117b0" strokeType="INSIDE" strokeWidth="0.0" text="Система &quot;Любительский клуб рыболовов&quot;">
+        <Text fill="#2473a8" fontSmoothingType="LCD" layoutX="83.0" layoutY="31.0" stroke="#8117b0" strokeType="INSIDE" strokeWidth="0.0" text="Система &quot;Клуб рыболовов-любителей&quot;">
             <font>
                 <Font name="System Bold" size="18.0" />
             </font>
         </Text>
         <Button fx:id="logOut" layoutX="450.0" layoutY="11.0" mnemonicParsing="false" text="Разлогиниться" />
+      <ImageView fitHeight="46.0" fitWidth="62.0" layoutX="7.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/imgonline-com-ua-Transparent-backgr-2cRfViDqFaBaXXp.png" />
+         </image>
+      </ImageView>
     </children>
 </Pane>

@@ -65,7 +65,7 @@ public class UserLogicController {
                 SingUpController.stage = stage;
             }
             Parent e = FXMLLoader.load(this.getClass().getResource(url));
-            Scene scene = new Scene(e, 550, 400);
+            Scene scene = new Scene(e, 469, 400);
             // устанавливаем заголовк окна
             stage.setTitle(title);
             stage.setScene(scene);
